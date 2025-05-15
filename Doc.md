@@ -137,10 +137,6 @@ When you initialize your Subgraph, the CLI will ask you for the following inform
 - **Index contract events as entities**: It is suggested that you set this to true, as it will automatically add mappings to your Subgraph for every emitted event.
 - **Add another contract** (optional): You can add another contract.
 
-See the following screenshot for an example of what to expect when initializing your Subgraph:
-
-![Subgraph command](/img/CLI-Example.png)
-
 #### 4. Edit your Subgraph
 
 When making changes to the Subgraph, you will mainly work with three files:
@@ -149,7 +145,7 @@ When making changes to the Subgraph, you will mainly work with three files:
 - Schema (`schema.graphql`) - defines what data you wish to retrieve from the Subgraph.
 - AssemblyScript Mappings (`mapping.ts`) - translates data from your data sources to the entities defined in the schema.
 
-For a detailed breakdown on how to write your Subgraph, check out [Creating a Subgraph](/developing/creating-a-subgraph/).
+For a detailed breakdown on how to write your Subgraph, check out [Creating a Subgraph](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph/).
 
 #### 5. Deploy your Subgraph
 
@@ -157,20 +153,18 @@ When you **deploy** a Subgraph, you push it to [Subgraph Studio](https://thegrap
 
 Once your Subgraph is written, run the following commands:
 
-    ```sh
-    graph codegen && graph build
-    ```
+```sh
+graph codegen && graph build
+```
 
 Authenticate and deploy your Subgraph. The deploy key can be found on the Subgraph's page in Subgraph Studio.
 
-![Deploy key](/img/subgraph-studio-deploy-key.jpg)
+```sh
 
-    ```sh
+graph auth <DEPLOY_KEY>
 
-    graph auth <DEPLOY_KEY>
-
-    graph deploy <SUBGRAPH_SLUG>
-    ```
+graph deploy <SUBGRAPH_SLUG>
+```
 
 #### 6. Review your Subgraph
 
@@ -178,27 +172,21 @@ If you’d like to test your Subgraph before publishing it, you can use [Subgrap
 
 - Run a sample query.
 - Analyze your Subgraph in the dashboard to check information.
-- Check the logs on the dashboard to see if there are any errors with your Subgraph. The logs of an operational Subgraph will look like this:
-
-  ![Subgraph logs](/img/subgraph-logs-image.png)
+- Check the logs on the dashboard to see if there are any errors with your Subgraph.
 
 #### 7. Publish your Subgraph to The Graph Network
 
 When your Subgraph is ready for a production environment, you can publish it to the decentralized network. Publishing is an onchain action that does the following:
 
-- It makes your Subgraph available to be to indexed by the decentralized [Indexers](/indexing/overview/) on The Graph Network.
+- It makes your Subgraph available to be to indexed by the decentralized [Indexers](https://thegraph.com/docs/en/indexing/overview/) on The Graph Network.
 - It removes rate limits and makes your Subgraph publicly searchable and queryable in [Graph Explorer](https://thegraph.com/explorer/).
-- It makes your Subgraph available for [Curators](/resources/roles/curating/) to add curation signal.
+- It makes your Subgraph available for [Curators](https://thegraph.com/docs/en/resources/roles/curating/) to add curation signal.
 
 To publish your Subgraph, click the Publish button in the dashboard and select your network.
 
-![Publish a Subgraph on Subgraph Studio](/img/publish-sub-transfer.png)
-
 > It is recommended that you curate your own Subgraph with at least 3,000 GRT to incentivize indexing.
 
-To save on gas costs, you can curate your Subgraph in the same transaction you publish it by selecting this option:
-
-![Subgraph publish](/img/studio-publish-modal.png)
+To save on gas costs, you can curate your Subgraph in the same transaction when you publish.
 
 #### 8. Query your Subgraph
 
@@ -206,4 +194,4 @@ You now have access to 100,000 free queries per month with your Subgraph on The 
 
 You can query your Subgraph by sending GraphQL queries to its Query URL, which you can find by clicking the Query button.
 
-For more information about querying data from your Subgraph, read [Querying The Graph](/subgraphs/querying/introduction/).
+For more information about querying data from your Subgraph, read [Querying The Graph](https://thegraph.com/docs/en/subgraphs/querying/introduction/).
