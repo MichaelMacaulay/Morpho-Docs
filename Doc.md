@@ -15,67 +15,44 @@ Morpho has several official subgraphs available for querying data from the proto
 
 ### Common Query Examples
 
-#### 1. Query User Positions
+> Example queries are from the [Morpho Blue Subgraph](https://thegraph.com/explorer/subgraphs/8Lz789DP5VKLXumTMTgygjU2xtuzx8AhbaacgN5PYCAs?view=Query&chain=arbitrum-one).
+
+#### 1. Query Interest Rates
 
 ```graphql
 {
-  positions(
-    where: { owner: "0xYourAddressHere" }
-    orderBy: supplyShares
-    orderDirection: desc
-  ) {
-    id
-    owner {
-      id
-    }
-    market {
-      id
-      name
-    }
-    supplyShares
-    borrowShares
-    isCollateral
-    supplyAssetBalance
-    borrowAssetBalance
-  }
-}
-```
-
-#### 2. Query Market Statistics
-
-```graphql
-{
-  markets(first: 10) {
+  tokens(first: 5) {
     id
     name
-    totalSupplyAssets
-    totalBorrowAssets
-    supplyRate
-    borrowRate
-    totalSupplyShares
-    totalBorrowShares
-    lastUpdateTimestamp
+    symbol
+    decimals
+  }
+  interestRates(first: 5) {
+    id
+    rate
+    side
+    type
   }
 }
 ```
 
-#### 3. Query Historical Market APY
+#### 2. Daily Active Borrowing Positions
 
 ```graphql
 {
-  marketDailySnapshots(
-    where: { market: "0xMarketAddressHere" }
-    orderBy: timestamp
-    orderDirection: desc
-    first: 30
-  ) {
+  marketDailySnapshots(first: 10) {
     id
-    timestamp
-    supplyRate
-    borrowRate
-    totalSupplyAssets
-    totalBorrowAssets
-    utilization
+    dailyActiveBorrowingPositionCount
+  }
+}
+```
+
+#### 3. Query Daily Transaction Count
+
+```graphql
+{
+  usageMetricsDailySnapshots(first: 10, orderBy: id, orderDirection: desc) {
+    dailyTransactionCount
   }
 }
 ```
