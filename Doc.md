@@ -2,7 +2,7 @@
 title: Subgraphs on Morpho
 ---
 
-Morpho has several official subgraphs available for querying data from the protocol:
+Morpho offers several official Subgraphs available for querying data from The Graph:
 
 - [Morpho Blue](https://thegraph.com/explorer/subgraphs/8Lz789DP5VKLXumTMTgygjU2xtuzx8AhbaacgN5PYCAs?view=Query&chain=arbitrum-one)
 - [Morpho Blue Sonic](https://thegraph.com/explorer/subgraphs/J2THmwKHrTLKT9HPZNwZ69NkJ7WSbtLKz7pUQZW1Z1Qc?view=Query&chain=arbitrum-one)
@@ -36,7 +36,7 @@ Morpho has several official subgraphs available for querying data from the proto
 }
 ```
 
-#### 2. Daily Active Borrowing Positions
+#### 2. Query Daily Active Borrowing Positions
 
 ```graphql
 {
@@ -57,6 +57,18 @@ Morpho has several official subgraphs available for querying data from the proto
 }
 ```
 
+### Additional Resources
+
+- [Find more Morpho Subgraphs on Graph Explorer](https://thegraph.com/explorer?search=morpho&orderBy=Query+Count&orderDirection=desc)
+- [Learn how to query data from an application](https://thegraph.com/docs/en/subgraphs/querying/from-an-application/)
+- [Learn about best practices when querying Subgraphs on The Graph](https://thegraph.com/docs/en/subgraphs/querying/best-practices/)
+
+---
+
+If a Subgraph is not already indexing the data you need, you can also build a Subgraph in ~5 minutes.
+
+## Building a Subgraph
+
 Create, deploy, and query a [Subgraph](/subgraphs/developing/developer-faq/#1-what-is-a-subgraph) on The Graph Network.
 
 By the end, you'll have:
@@ -65,22 +77,22 @@ By the end, you'll have:
 - Deployed it to Subgraph Studio for testing
 - Published to The Graph Network for decentralized indexing
 
-## Prerequisites
+### Prerequisites
 
 - A crypto wallet
 - A deployed smart contract on a [supported network](/supported-networks/)
 - [Node.js](https://nodejs.org/) & a package manager of your choice (`npm`, `yarn` or `pnpm`)
 
-## How to Build a Subgraph
+### How to Build a Subgraph
 
-### 1. Create a Subgraph in Subgraph Studio
+#### 1. Create a Subgraph in Subgraph Studio
 
 1. Go to [Subgraph Studio](https://thegraph.com/studio/)
 2. Connect your wallet
 3. Click "Create a Subgraph"
 4. Name it in Title Case: "Subgraph Name Chain Name"
 
-### 2. Install the Graph CLI
+#### 2. Install the Graph CLI
 
 On your local machine, run one of the following commands:
 
@@ -102,7 +114,7 @@ Verify install:
 graph --version
 ```
 
-### 3. Initialize your Subgraph
+#### 3. Initialize your Subgraph
 
 > You can find commands for your specific Subgraph in [Subgraph Studio](https://thegraph.com/studio/).
 
@@ -129,7 +141,7 @@ See the following screenshot for an example of what to expect when initializing 
 
 ![Subgraph command](/img/CLI-Example.png)
 
-### 4. Edit your Subgraph
+#### 4. Edit your Subgraph
 
 When making changes to the Subgraph, you will mainly work with three files:
 
@@ -139,7 +151,7 @@ When making changes to the Subgraph, you will mainly work with three files:
 
 For a detailed breakdown on how to write your Subgraph, check out [Creating a Subgraph](/developing/creating-a-subgraph/).
 
-### 5. Deploy your Subgraph
+#### 5. Deploy your Subgraph
 
 When you **deploy** a Subgraph, you push it to [Subgraph Studio](https://thegraph.com/studio/), where you can test, stage and review it. A deployed Subgraph's indexing is performed by the [Upgrade Indexer](https://thegraph.com/blog/upgrade-indexer/), which is a single Indexer owned and operated by Edge & Node. A **deployed** Subgraph is free to use, rate-limited, not visible to the public, and meant to be used for development, staging, and testing purposes.
 
@@ -160,7 +172,7 @@ Authenticate and deploy your Subgraph. The deploy key can be found on the Subgra
     graph deploy <SUBGRAPH_SLUG>
     ```
 
-### 6. Review your Subgraph
+#### 6. Review your Subgraph
 
 If you’d like to test your Subgraph before publishing it, you can use [Subgraph Studio](https://thegraph.com/studio/) to do the following:
 
@@ -170,7 +182,7 @@ If you’d like to test your Subgraph before publishing it, you can use [Subgrap
 
   ![Subgraph logs](/img/subgraph-logs-image.png)
 
-### 7. Publish your Subgraph to The Graph Network
+#### 7. Publish your Subgraph to The Graph Network
 
 When your Subgraph is ready for a production environment, you can publish it to the decentralized network. Publishing is an onchain action that does the following:
 
@@ -188,7 +200,7 @@ To save on gas costs, you can curate your Subgraph in the same transaction you p
 
 ![Subgraph publish](/img/studio-publish-modal.png)
 
-### 8. Query your Subgraph
+#### 8. Query your Subgraph
 
 You now have access to 100,000 free queries per month with your Subgraph on The Graph Network!
 
