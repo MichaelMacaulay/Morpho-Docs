@@ -57,6 +57,46 @@ Morpho offers several official Subgraphs available for querying data from The Gr
 }
 ```
 
+---
+
+## Natural Language Queries with Subgraph MCP
+
+For developers who prefer conversational interfaces, Morpho Subgraphs can also be queried using natural language through The Graph's Subgraph MCP (Model Context Protocol).
+
+### What You Can Do with Subgraph MCP
+
+- Ask questions about Morpho lending/borrowing data in plain English
+- Execute queries without GraphQL knowledge
+- Explore Subgraph schemas interactively
+
+### Example Natural Language Queries for Morpho
+
+```markdown
+What are the top 5 markets by total value locked in Morpho Blue?
+```
+
+```markdown
+Show me the most recent borrowing positions with their interest rates
+```
+
+```markdown
+Which tokens have the highest borrowing volume this week?
+```
+
+```markdown
+Find markets with utilization rates above 80%
+```
+
+### Getting Started with Subgraph MCP
+
+To use natural language queries with Morpho Subgraphs:
+
+1. **Install Claude Desktop** and get a Gateway API key from [Subgraph Studio](https://thegraph.com/studio/)
+2. **Configure the MCP server** in your Claude Desktop settings
+3. **Add the Subgraph resource** to your chat context when querying Morpho data
+
+For detailed setup instructions, see [The Graph's Subgraph MCP documentation](https://thegraph.com/docs/en/subgraphs/mcp/claude/).
+
 ### Additional Resources
 
 - [Find more Morpho Subgraphs on Graph Explorer](https://thegraph.com/explorer?search=morpho&orderBy=Query+Count&orderDirection=desc)
