@@ -2,7 +2,19 @@
 title: Subgraphs on Morpho
 ---
 
-Morpho offers several official Subgraphs available for querying data from The Graph:
+The existing Morpho Subgraphs provide developers with a powerful way to access and retrieve data from the Morpho Protocol using GraphQL-based Subgraphs. These Subgraphs enable developers to track the evolution of the supported lending protocols and their interactions with Morpho.
+
+To use the Morpho Subgraphs, you need to be familiar with [GraphQL](https://graphql.org/). Visit the [The Graph's Playground](https://thegraph.com/explorer/subgraphs/8Lz789DP5VKLXumTMTgygjU2xtuzx8AhbaacgN5PYCAs?view=Query&chain=arbitrum-one) to explore the available subgraphs and learn how to structure queries.
+
+Morpho's official Subgraphs provide a variety of data including:
+
+- Real-time metrics across all supported networks
+- Lending market evolution
+- User interactions
+- Pool rates
+- And more
+
+Morpho offers several official Subgraphs to access onchain data:
 
 - [Morpho Blue](https://thegraph.com/explorer/subgraphs/8Lz789DP5VKLXumTMTgygjU2xtuzx8AhbaacgN5PYCAs?view=Query&chain=arbitrum-one)
 - [Morpho Blue Sonic](https://thegraph.com/explorer/subgraphs/J2THmwKHrTLKT9HPZNwZ69NkJ7WSbtLKz7pUQZW1Z1Qc?view=Query&chain=arbitrum-one)
@@ -10,6 +22,18 @@ Morpho offers several official Subgraphs available for querying data from The Gr
 - [Morpho Blue Arbitrum](https://thegraph.com/explorer/subgraphs/XsJn88DNCHJ1kgTqYeTgHMQSK4LuG1LR75339QVeQ26?view=Query&chain=arbitrum-one)
 - [Morpho Bera Stone v3](https://thegraph.com/explorer/subgraphs/DTPZ5MuT8jMntR64iu9NaraBR454QYhYGdv6uvdFcUfj?view=Query&chain=arbitrum-one)
 - [Morpho Blue Polygon](https://thegraph.com/explorer/subgraphs/EhFokmwryNs7qbvostceRqVdjc3petuD13mmdUiMBw8Y?view=Query&chain=arbitrum-one)
+- [More Morpho Subgrahs](https://thegraph.com/explorer?search=morpho&orderBy=Query+Count&orderDirection=desc)
+
+## Get Started
+
+Here is how you can start querying Morpho's Subgraphs:
+
+1. Visit The Graph Playground
+2. Select a Subgraph
+3. Open the “playground” tab to start creating queries
+4. If you want to make queries from a script, generate an API key and add it to the Subgraph query link, accessible through the subgraph page (replace the [api key] placeholder with your API key).
+
+Subgraph Studio users start on a Free Plan, which allows them to make 100,000 queries per month. Additional queries are available following [more information on The Graph](https://thegraph.com/docs/en/subgraphs/billing/).
 
 ## Querying Morpho Subgraphs
 
